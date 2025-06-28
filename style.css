@@ -1,0 +1,138 @@
+body {
+  margin: 0;
+  font-family: "Red Hat Display", sans-serif;
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  font-weight: bold;
+  padding-top: 20px;
+  background-color: #f5f5f5;
+}
+
+#palleteContainer {
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.palleteItem {
+  transition: background-color 0.5s;
+  height: 80px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.palleteItem span {
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.2);
+  color: #fff;
+  display: inline-block;
+  min-width: 80px;
+  font-size: 14px;
+  border-top-left-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.palleteItem span:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  transform: translateY(-5px);
+}
+
+button {
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: bold;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  padding: 14px;
+  color: #fff;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #333 0%, #000 100%);
+  transition: all 0.3s ease;
+  margin-top: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+  max-width: 500px;
+}
+
+h1 {
+  margin-bottom: 30px;
+  color: #333;
+  font-size: 2.5rem;
+}
+
+.instructions {
+  margin-top: 20px;
+  color: #666;
+  font-size: 0.9rem;
+  font-weight: normal;
+}
+
+.copied {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 4px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.copied.show {
+  opacity: 1;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 10px 0;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 500px) {
+  .container {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  #palleteContainer {
+    width: 280px;
+  }
+}

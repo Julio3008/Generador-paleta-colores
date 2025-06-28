@@ -1,21 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Color aleatorio</title>
+    <title>Generador de Paleta de Colores</title>
     <link
-      href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;700;900&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" type="text/javascript" defer></script>
   </head>
   <body>
-    <div>
+    <div class="container">
+      <h1>Generador de Paleta de Colores</h1>
       <div id="palleteContainer"></div>
-      <button onclick="updatePallete()">Generar paleta</button>
+      <button onclick="updatePallete()">Generar nueva paleta</button>
+      <p class="instructions">
+        Haz clic en un color para copiarlo al portapapeles
+      </p>
     </div>
+    <div class="copied" id="notification">¡Copiado al portapapeles!</div>
+    <footer>
+      <p>Generador de Paletas de Colores | 2023</p>
+    </footer>
   </body>
 </html>
